@@ -1,0 +1,136 @@
+* {
+  transition: ease-in-out all 1s;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.category-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.category-nav li {
+  margin-right: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+main {
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+img {
+  aspect-ratio: 2;
+  object-fit: cover;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+.article h2 {
+  margin: 0;
+  border-bottom: 2px solid;
+}
+
+.article p {
+  margin-top: 5px;
+}
+
+.article .read-more {
+  width: fit-content;
+  color: #fff;
+  background-color: #007bff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+}
+
+.pagination {
+  display: flex;
+  gap: 10px;
+}
+
+.prev-button,
+.next-button,
+.pagination button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0.2rem;
+}
+
+/* Additional styles for active pagination button */
+.pagination button.active {
+  background-color: #007bff;
+}
+
+@media (max-width: 1024px) {
+  main {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .pagination-container {
+    justify-content: space-between;
+  }
+  .pagination,
+  .category-nav {
+    display: none;
+  }
+}

@@ -1,0 +1,5 @@
+copy these lines and paste into config.js
+
+// Replace this api key with you newsapi.org api key.
+
+const API_KEY = "YOUR_API_KEY";
